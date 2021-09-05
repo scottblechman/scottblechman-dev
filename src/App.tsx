@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import { HeaderComponent } from './components';
+import { User } from './types';
 
 function App() {
+
+  const [profile, setProfile] = useState<User | undefined>(undefined);
+
+  useEffect(() => {
+    // 
+    fetch('https://api.github.com/users/scottblechman')
+      .then(response => response.json())
+      .then(data => setProfile(data));  
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="h-screen bg-gray-50">
+      <header>
+        <HeaderComponent avatar={profile?.avatar_url} />
       </header>
+      <section>
+      </section>
+      <footer>
+      </footer>
     </div>
   );
 }

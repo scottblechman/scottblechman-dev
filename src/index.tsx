@@ -4,6 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Define Ionicon element
+interface IonIconProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+  name: string,
+  size?: string,
+};
+declare global {
+  namespace JSX {
+      interface IntrinsicElements {
+          'ion-icon': IonIconProps;
+      }
+  }
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
