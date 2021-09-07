@@ -1,4 +1,3 @@
-import './Header.css';
 import { strings, socialLinks } from '../../res';
 
 type HeaderProps = {
@@ -21,7 +20,7 @@ function Header(props: HeaderProps) {
           {socialLinks.map((link, index) => {
             const key: string = Object.keys(link)[0];
             return (
-              <a href={link[key]} key={index} className="mx-2">
+              <a href={link[key]} key={index} className="mx-2 text-xl">
                 <ion-icon name={key} />
               </a>
             )

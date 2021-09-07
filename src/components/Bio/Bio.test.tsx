@@ -3,6 +3,6 @@ import Bio from './Bio';
 
 test('section name is "About Me"', () => {
   render(<Bio />);
-  const linkElement = screen.getByText(/About Me/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = screen.getByText(/About Me/i);
+  expect(titleElement).toBeInTheDocument();
 });

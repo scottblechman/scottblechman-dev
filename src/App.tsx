@@ -13,7 +13,7 @@ function App() {
       .then(data => setProfile(data));
     fetch('https://api.github.com/users/scottblechman/repos')
       .then(response => response.json())
-      .then(data => setRepos(data)); 
+      .then(data => setRepos(data.filter((p: Project) => !p.private))); 
   }, []);
 
   return (

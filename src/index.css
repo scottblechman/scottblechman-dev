@@ -5,3 +5,7 @@
 body {
   @apply bg-green-500;
 }
+
+/*ion-icon {
+  @apply text-xl lg:text-3xl;
+}*/

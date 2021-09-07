@@ -1,4 +1,5 @@
 const pinnedProjects = [
+  'app',
   'parsec',
   'Otter',
   'mindful'

@@ -6,7 +6,7 @@ export default interface Project {
   name: string;
   full_name: string;
   private: boolean;
-  owner: User;
+  owner?: User;
   html_url: string;
   description: string;
   fork: boolean;
@@ -69,9 +69,10 @@ export default interface Project {
   archived: boolean;
   disabled: boolean;
   open_issues_count: number;
-  license: License;
+  license?: License;
   forks: number;
   open_issues: number;
   watchers: number;
   default_branch: string;
+  parent?: Project;
 }

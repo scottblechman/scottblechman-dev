@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import Card from './Card';
 
-test('renders the section title', () => {
+test('renders the card title', () => {
   render(<Card title="card title" />);
-  const linkElement = screen.getByText(/card title/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = screen.getByText(/card title/i);
+  expect(titleElement).toBeInTheDocument();
 });
