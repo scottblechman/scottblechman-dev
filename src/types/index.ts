@@ -1,3 +1,5 @@
 import User from './User';
+import Project from './Project';
+import License from './License';
 
-export type { User }
+export type { User, Project, License }

@@ -1,3 +1,5 @@
-import HeaderComponent from './Header/HeaderComponent';
+import Header from './Header/Header';
+import Bio from './Bio/Bio';
+import Projects from './Projects/Projects';
 
-export { HeaderComponent }
+export { Header, Bio, Projects }
