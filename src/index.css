@@ -3,9 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-green-500;
+  @apply bg-gray-50;
 }
-
-/*ion-icon {
-  @apply text-xl lg:text-3xl;
-}*/

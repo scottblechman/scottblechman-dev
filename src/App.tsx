@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Header, Bio, Projects } from './components';
+import { Header, Bio, Projects, Skills } from './components';
 import { User, Project } from './types';
 
 function App() {
@@ -17,13 +17,14 @@ function App() {
   }, []);
 
   return (
-    <div className="h-screen mt-24 lg:mt-48 bg-gray-50">
-      <header className="relative -top-16 lg:-top-28">
+    <div>
+      <header className="mb-72 lg:mb-48">
         <Header avatar={profile?.avatar_url} />
       </header>
-      <section className="mx-4 lg:mx-96 -mt-14">
+      <section className="mx-4 lg:mx-96 -mt-14 grid grid-cols-1 lg:grid-cols-3">
         <Bio />
         <Projects projects={repos} />
+        <Skills />
       </section>
       <footer>
       </footer>

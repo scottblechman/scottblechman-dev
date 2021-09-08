@@ -3,11 +3,13 @@ type CardProps = {
   icon?: string,
   caption?:string,
   children?: any,
+  /** Displays the card twice as wide on large displays if true. */
+  large?: boolean,
 }
 
 function Card(props: CardProps) {
   return (
-    <div className="mx-2 my-4 lg:mx-32 lg:my-8 p-2 bg-gray-100 rounded-lg text-gray-700">
+    <div className={`m-2 lg:mx-4 lg:my-8 ${props.large ? 'lg:col-span-2' : ''} p-2 bg-gray-100 rounded-lg text-gray-700`}>
       <div className="flex ml-2">
         {props.icon &&
           <div className="mr-2 lg:mr-4 text-2xl">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IconButton } from '..';
+import IconButton from '../IconButton/IconButton';
 import { pinnedProjects, strings } from '../../res';
 import { Project } from '../../types';
 import Card from '../Card/Card';
@@ -62,7 +62,8 @@ function Projects(props: ProjectsProps) {
   return (
    <Card 
    title={strings.projectsTitle}
-   icon="cloud-outline">
+   icon="cloud-outline"
+   large>
       {filteredProjects.length > 0 &&
         <div className="flex justify-between">
           <div className="pt-28">
