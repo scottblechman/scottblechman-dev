@@ -4,6 +4,7 @@ import { pinnedProjects, strings, urls } from '../../res';
 import { Project } from '../../types';
 import Card from '../Card/Card';
 import ProjectCard from './ProjectCard/ProjectCard';
+import { useMediaQuery } from 'react-responsive';
 
 type ProjectsProps = {
   projects: Project[] | undefined;
@@ -14,6 +15,11 @@ function Projects(props: ProjectsProps) {
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [visibleProject, setVisibleProject] = useState(0);
   const [languageColors, setLanguageColors] = useState<any>(undefined);
+
+  const isLarge = useMediaQuery({query: '(min-width: 1024px)'});
+
+  // The max amount of cards that will be shown in widescreen at a time.
+  const maxProjectsWhenLarge = 4;
 
   const getProjectParent = useCallback((project: Project) => {
     if(project && project.fork && !project.parent) {
@@ -67,11 +73,25 @@ function Projects(props: ProjectsProps) {
       {filteredProjects.length > 0
         ? <div className="flex justify-between">
           <div className="pt-28">
-            <IconButton name="chevron-back-circle-outline" onClick={() => switchProjects(visibleProject - 1)} disabled={visibleProject === 0} />
+            {!isLarge || filteredProjects.length < maxProjectsWhenLarge 
+              ? <IconButton name="chevron-back-circle-outline" onClick={() => switchProjects(visibleProject - 1)} disabled={visibleProject === 0} />
+              : <div />
+            }
           </div>
-          <ProjectCard project={filteredProjects[visibleProject]} languageColor={getLanguageColor(filteredProjects[visibleProject])} />
+          {isLarge
+            ? filteredProjects.map((project, index) => {
+                return (
+                  (index < maxProjectsWhenLarge)
+                    ? <ProjectCard key={index} project={project} languageColor={getLanguageColor(project)} />
+                    : <div />
+                )
+              })
+            : <ProjectCard project={filteredProjects[visibleProject]} languageColor={getLanguageColor(filteredProjects[visibleProject])} />
+          }
           <div className="pt-28">
-            <IconButton name="chevron-forward-circle-outline" onClick={() => switchProjects(visibleProject + 1)} disabled={visibleProject === filteredProjects.length - 1} />
+            {!isLarge || filteredProjects.length < maxProjectsWhenLarge
+              ? <IconButton name="chevron-forward-circle-outline" onClick={() => switchProjects(visibleProject + 1)} disabled={visibleProject === filteredProjects.length - 1} />
+              : <div />}
           </div>
         </div>
         : <div className="flex justify-center">

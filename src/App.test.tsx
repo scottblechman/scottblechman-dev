@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders the name', () => {
   render(<App />);
-  const nameElement = screen.getByText(/Scott Blechman/i);
-  expect(nameElement).toBeInTheDocument();
+  const nameElement = screen.getAllByText(/Scott Blechman/i);
+  expect(nameElement.length).toBeGreaterThan(0);
 });
