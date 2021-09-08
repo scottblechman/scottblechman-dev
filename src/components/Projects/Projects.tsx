@@ -68,7 +68,7 @@ function Projects(props: ProjectsProps) {
   return (
    <Card 
    title={strings.projectsTitle}
-   icon="cloud"
+   icon={`cloud${window.matchMedia('(prefers-color-scheme: dark)')?.matches ? '' : '-outline'}`}
    large>
       {filteredProjects.length > 0
         ? <div className="flex justify-between">

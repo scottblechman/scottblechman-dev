@@ -24,7 +24,7 @@ function ProjectCard({project, languageColor}: ProjectCardProps) {
             <p className={`${!project ? 'bg-gray-200 text-gray-200 rounded h-4' : 'text-lg font-medium -mt-1.5'}`}>{project?.name ?? '----------'}</p>
           </div>
           <p className="text-xs text-gray-100 dark:text-gray-50 dark:text-opacity-95 px-1 pt-0.5 mb-px rounded-full dark:bg-gray-700" style={{
-            backgroundColor: window.matchMedia('(prefers-color-scheme: dark)').matches ? '' : languageColor
+            backgroundColor: window.matchMedia('(prefers-color-scheme: dark)')?.matches ? '' : languageColor
           }}>{project?.language ?? ''}</p>
         </div>
         {project?.fork && project?.parent &&

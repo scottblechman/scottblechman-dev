@@ -9,10 +9,11 @@ interface IonIconProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTML
   name: string,
   size?: string,
 };
+
 declare global {
   namespace JSX {
       interface IntrinsicElements {
-          'ion-icon': IonIconProps;
+        'ion-icon': IonIconProps;
       }
   }
 };
