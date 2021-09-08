@@ -25,7 +25,7 @@ function ListCard({title, icon, list}: ListCardProps) {
             <div className="lg:pt-0.5 mr-2 lg:mr-4 text-xl">
               <ion-icon name={key} />
             </div>
-            <p className="text-gray-700 font-medium lg:text-lg">{item[key]}</p>
+            <p className="text-gray-700 dark:text-gray-50 dark:text-opacity-95 font-medium lg:text-lg">{item[key]}</p>
           </div>
         )
       })}

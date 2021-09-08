@@ -68,7 +68,7 @@ function Projects(props: ProjectsProps) {
   return (
    <Card 
    title={strings.projectsTitle}
-   icon="cloud-outline"
+   icon="cloud"
    large>
       {filteredProjects.length > 0
         ? <div className="flex justify-between">

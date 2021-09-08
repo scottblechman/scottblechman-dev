@@ -14,7 +14,7 @@ function ProjectCard({project, languageColor}: ProjectCardProps) {
   ];
 
   return (
-    <div className={`bg-gray-300 p-4 w-48 h-64 rounded-md relative ${!project ? 'animate-pulse' : ''}`}>
+    <div className={`bg-gray-300 dark:bg-gray-800 p-4 w-48 h-64 rounded-md relative ${!project ? 'animate-pulse' : ''}`}>
       <div>
         <div className="flex justify-between items-stretch">
           <div className="flex">
@@ -23,17 +23,17 @@ function ProjectCard({project, languageColor}: ProjectCardProps) {
             </div>
             <p className={`${!project ? 'bg-gray-200 text-gray-200 rounded h-4' : 'text-lg font-medium -mt-1.5'}`}>{project?.name ?? '----------'}</p>
           </div>
-          <p className="text-xs text-gray-100 px-1 pt-0.5 mb-px rounded-full" style={{
-            backgroundColor: languageColor
+          <p className="text-xs text-gray-100 dark:text-gray-50 dark:text-opacity-95 px-1 pt-0.5 mb-px rounded-full dark:bg-gray-700" style={{
+            backgroundColor: window.matchMedia('(prefers-color-scheme: dark)').matches ? '' : languageColor
           }}>{project?.language ?? ''}</p>
         </div>
         {project?.fork && project?.parent &&
-          <p className="text-xs text-gray-500">Forked from {project.parent?.full_name ?? ''}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-50 dark:text-opacity-95">Forked from {project.parent?.full_name ?? ''}</p>
         }
         <div className="text-sm mt-4">
           {project?.description}
           {project 
-            ? <a href={project?.html_url} className="ml-2 underline text-green-600">(View on GitHub)</a>
+            ? <a href={project?.html_url} className="ml-2 underline text-green-600 dark:text-gray-400 dark:text-opacity-95">(View on GitHub)</a>
             : <p className="ml-2 bg-gray-200 text-gray-200 rounded">________________</p>
           }
         </div>
@@ -41,7 +41,7 @@ function ProjectCard({project, languageColor}: ProjectCardProps) {
           {stats.map((item, index) => {
             const key: string = Object.keys(item)[0];
             return (
-              <div className="flex" key={index}>
+              <div className="flex dark:text-gray-50 dark:text-opacity-95" key={index}>
                 <ion-icon name={key} />
                 <p className={`-mt-0.5 ml-1 mr-2 ${!project ? 'px-1 bg-gray-200 text-gray-200 rounded' : ''}`}>{item[key] ?? '_'}</p>
               </div>

@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen bg-gray-50 dark:bg-gray-700">
       <header className="mb-72 lg:mb-48">
         <Header avatar={profile?.avatar_url} />
       </header>
