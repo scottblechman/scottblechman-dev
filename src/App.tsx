@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Header, Bio, Projects, Skills } from './components';
+import { Header, Bio, Projects, Skills, Footer } from './components';
+import { urls } from './res';
 import { User, Project } from './types';
 
 function App() {
@@ -8,16 +9,16 @@ function App() {
   const [repos, setRepos] = useState<Project[] | undefined>(undefined);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/scottblechman')
+    fetch(urls.profile)
       .then(response => response.json())
       .then(data => setProfile(data));
-    fetch('https://api.github.com/users/scottblechman/repos')
+    fetch(urls.repos)
       .then(response => response.json())
       .then(data => setRepos(data.filter((p: Project) => !p.private))); 
   }, []);
 
   return (
-    <div>
+    <div className="relative h-screen">
       <header className="mb-72 lg:mb-48">
         <Header avatar={profile?.avatar_url} />
       </header>
@@ -27,6 +28,7 @@ function App() {
         <Skills />
       </section>
       <footer>
+        <Footer />
       </footer>
     </div>
   );
