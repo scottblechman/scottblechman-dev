@@ -6,6 +6,8 @@ const strings = {
   skillsTitle: 'What I\'m Using',
   location: 'Dallas, TX',
   footer: '\u00a92021 Scott Blechman',
+  contactFormTitle: 'Get In Touch',
+  contactFormPlaceholder: 'Message',
 
 };
 

@@ -11,14 +11,16 @@ function App() {
   useEffect(() => {
     fetch(urls.profile)
       .then(response => response.json())
-      .then(data => setProfile(data));
+      .then(data => setProfile(data))
+      .catch(err => console.error(err));
     fetch(urls.repos)
       .then(response => response.json())
-      .then(data => setRepos(data.filter((p: Project) => !p.private))); 
+      .then(data => setRepos(data.filter((p: Project) => !p.private)))
+      .catch(err => console.error(err));
   }, []);
 
   return (
-    <div className="relative h-screen bg-gray-50 dark:bg-gray-700">
+    <div className="relative h-screen">
       <header className="mb-72 lg:mb-48">
         <Header avatar={profile?.avatar_url} />
       </header>
