@@ -8,6 +8,8 @@ const strings = {
   footer: '\u00a92021 Scott Blechman',
   contactFormTitle: 'Get In Touch',
   contactFormPlaceholder: 'Message',
+  contactFormEmailInvalid: 'Please enter a valid email.',
+  contactFormMessageInvalid: 'Don\'t forget the message!',
 
 };
 

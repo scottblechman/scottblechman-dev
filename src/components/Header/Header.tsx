@@ -34,11 +34,12 @@ function Header(props: HeaderProps) {
                   </a>
                 )
               })}
+              {/* Removed until emailjs integration complete.
               <button onClick={() => setContactFormOpen(true)}
               className="ml-6 mb-1.5 bg-green-500 dark:bg-gray-800 lg:dark:bg-gray-700 text-white text-opacity-95 text-sm
               lg:text-lg font-medium px-3 py-1 rounded-full transition delay-75 hover:bg-green-600 dark:hover:bg-gray-900 lg:dark:hover:bg-gray-800">
                 Contact Me
-              </button>
+            </button>*/}
             </div>
           </div>
         </div>
