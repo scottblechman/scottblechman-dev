@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# scottblechman.dev
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![build](https://github.com/scottblechman/scottblechman-dev/actions/workflows/build.yml/badge.svg)](https://github.com/scottblechman/scottblechman-dev/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/scottblechman/scottblechman-dev/branch/main/graph/badge.svg)](https://codecov.io/gh/scottblechman/scottblechman-dev)
 
 ## Available Scripts
 
