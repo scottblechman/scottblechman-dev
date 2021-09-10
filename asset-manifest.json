@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/scottblechman.dev/static/css/main.feed7734.chunk.css",
+    "main.js": "/scottblechman.dev/static/js/main.f573da09.chunk.js",
+    "main.js.map": "/scottblechman.dev/static/js/main.f573da09.chunk.js.map",
+    "runtime-main.js": "/scottblechman.dev/static/js/runtime-main.0d00175a.js",
+    "runtime-main.js.map": "/scottblechman.dev/static/js/runtime-main.0d00175a.js.map",
+    "static/js/2.978b85ab.chunk.js": "/scottblechman.dev/static/js/2.978b85ab.chunk.js",
+    "static/js/2.978b85ab.chunk.js.map": "/scottblechman.dev/static/js/2.978b85ab.chunk.js.map",
+    "static/js/3.60a8878e.chunk.js": "/scottblechman.dev/static/js/3.60a8878e.chunk.js",
+    "static/js/3.60a8878e.chunk.js.map": "/scottblechman.dev/static/js/3.60a8878e.chunk.js.map",
+    "index.html": "/scottblechman.dev/index.html",
+    "static/css/main.feed7734.chunk.css.map": "/scottblechman.dev/static/css/main.feed7734.chunk.css.map",
+    "static/js/2.978b85ab.chunk.js.LICENSE.txt": "/scottblechman.dev/static/js/2.978b85ab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d00175a.js",
+    "static/js/2.978b85ab.chunk.js",
+    "static/css/main.feed7734.chunk.css",
+    "static/js/main.f573da09.chunk.js"
+  ]
+}
