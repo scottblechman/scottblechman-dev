@@ -2,6 +2,7 @@
   "name": "scottblechman-dev",
   "version": "0.1.0",
   "private": true,
+  "homepage": "scottblechman.dev",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@headlessui/react": "^1.4.1",
@@ -14,6 +15,7 @@
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "emailjs-com": "^3.2.0",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-responsive": "^9.0.0-beta.4",
@@ -25,7 +27,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
