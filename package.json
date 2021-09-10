@@ -2,7 +2,7 @@
   "name": "scottblechman-dev",
   "version": "0.1.0",
   "private": true,
-  "homepage": "scottblechman.dev",
+  "homepage": "https://scottblechman.dev/",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@headlessui/react": "^1.4.1",
